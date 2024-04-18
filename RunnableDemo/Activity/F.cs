@@ -1,7 +1,7 @@
-﻿using WSC_SimChallenge_2024_Net.Activity;
-using WSC_SimChallenge_2024_Net.TestCase.Model;
+﻿using O2DESNet.Activity;
+using RunnableDemo.Entity;
 
-namespace WSC_SimChallenge_2024_Net.TestCase.Activity
+namespace RunnableDemo.Activity
 {
     public class F<T> : BaseActivity<T>
     {
@@ -36,7 +36,7 @@ namespace WSC_SimChallenge_2024_Net.TestCase.Activity
             {
                 ReadyToFinishList.Add(load);
             }
-			AttemptToFinish(load);
+            AttemptToFinish(load);
         }
     }
 }

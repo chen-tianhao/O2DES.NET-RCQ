@@ -1,6 +1,6 @@
-﻿using WSC_SimChallenge_2024_Net.Activity;
+﻿using O2DESNet.Activity;
 
-namespace WSC_SimChallenge_2024_Net.TestCase.Activity
+namespace RunnableDemo.Activity
 {
     public class E<T> : BaseActivity<T>
     {

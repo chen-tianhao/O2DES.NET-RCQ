@@ -1,7 +1,7 @@
-﻿using O2DESNet;
-using O2DESNet.Standard;
+﻿using System;
+using System.Collections.Generic;
 
-namespace WSC_SimChallenge_2024_Net.Activity
+namespace O2DESNet.Activity
 {
     public class BaseActivity<T> : Sandbox
     {

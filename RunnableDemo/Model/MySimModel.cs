@@ -1,7 +1,8 @@
 ﻿using O2DESNet;
-using WSC_SimChallenge_2024_Net.TestCase.Activity;
+using RunnableDemo.Activity;
+using RunnableDemo.Entity;
 
-namespace WSC_SimChallenge_2024_Net.TestCase.Model
+namespace RunnableDemo.Model
 {
     class MySimModel : Sandbox
     {

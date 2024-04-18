@@ -1,7 +1,4 @@
-﻿using O2DESNet;
-using WSC_SimChallenge_2024_Net.TestCase.Activity;
-
-namespace WSC_SimChallenge_2024_Net.TestCase.Model
+﻿namespace RunnableDemo.Entity
 {
     public class Bus
     {
