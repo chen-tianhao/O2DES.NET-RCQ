@@ -1,10 +1,11 @@
 ﻿using O2DESNet.Activity;
+using RunnableDemo.Entity;
 
 namespace RunnableDemo.Activity
 {
-    public class D<T> : BaseActivity<T>
+    public class D : BaseActivity<Bus>
     {
-        public D(bool debugMode = false, int seed = 0) : base(nameof(D<T>), debugMode, seed)
+        public D(bool debugMode = false, int seed = 0) : base(nameof(D), debugMode, seed)
         {
             TimeSpan = TimeSpan.FromSeconds(100);
         }

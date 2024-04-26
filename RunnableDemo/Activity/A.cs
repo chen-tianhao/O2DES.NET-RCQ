@@ -3,9 +3,9 @@ using RunnableDemo.Entity;
 
 namespace RunnableDemo.Activity
 {
-    public class A<T> : BaseActivity<T>
+    public class A : BaseActivity<Traveller>
     {
-        public A(bool debugMode = false, int seed = 0) : base(nameof(A<T>), debugMode, seed)
+        public A(bool debugMode = false, int seed = 0) : base(nameof(A), debugMode, seed)
         {
             NeedExtTryFinish = true;
         }
@@ -16,7 +16,7 @@ namespace RunnableDemo.Activity
             Bus? bus = (obj is Bus) ? (obj as Bus) : null;
             if ( bus == null ) { return; }
 
-            List<T> tmpPassengers = new List<T>();
+            List<Traveller> tmpPassengers = new List<Traveller>();
             foreach (var passenger in CompletedList)
             {
                 ReadyToFinishList.Add(passenger);

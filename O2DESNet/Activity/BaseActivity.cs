@@ -11,7 +11,7 @@ namespace O2DESNet.Activity
 
         public TimeSpan TimeSpan { get; set; }
         public int Capacity { get; set; }
-        private bool _debugMode;
+        protected bool _debugMode;
         public string ActivityName { get; set; }
         public bool NeedExtTryStart { get; set; } = false;
         public bool NeedExtTryFinish { get; set; } = false;

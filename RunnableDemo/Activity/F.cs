@@ -3,9 +3,9 @@ using RunnableDemo.Entity;
 
 namespace RunnableDemo.Activity
 {
-    public class F<T> : BaseActivity<T>
+    public class F : BaseActivity<Bus>
     {
-        public F(bool debugMode = false, int seed = 0) : base(nameof(F<T>), debugMode, seed)
+        public F(bool debugMode = false, int seed = 0) : base(nameof(F), debugMode, seed)
         {
             NeedExtTryStart = true;
             NeedExtTryFinish = true;
@@ -17,7 +17,7 @@ namespace RunnableDemo.Activity
             Traveller? traveller = (obj is Traveller) ? (obj as Traveller) : null;
 
             bool condition = traveller.Fee > 0;
-            T? load = PendingList.Count > 0 ? PendingList[0] : default; // Caution: Need to sepcify a load according to certain logic about obj
+            Bus? load = PendingList.Count > 0 ? PendingList[0] : default; // Caution: Need to sepcify a load according to certain logic about obj
             if (condition && load != null)
             {
                 ReadyToStartList.Add(load);
@@ -31,7 +31,7 @@ namespace RunnableDemo.Activity
             Traveller? traveller = (obj is Traveller) ? (obj as Traveller) : null;
 
             bool condition = traveller.Fee > 0;
-            T? load = CompletedList.Count > 0 ? CompletedList[0] : default; // Caution: Need to sepcify a load according to certain logic about obj
+            Bus? load = CompletedList.Count > 0 ? CompletedList[0] : default; // Caution: Need to sepcify a load according to certain logic about obj
             if (condition && load != null)
             {
                 ReadyToFinishList.Add(load);
