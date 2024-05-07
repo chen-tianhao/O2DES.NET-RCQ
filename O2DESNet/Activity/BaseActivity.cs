@@ -59,7 +59,7 @@ namespace O2DESNet.Activity
         {
             if (_debugMode) Console.WriteLine($"{ClockTime.ToString("yyyy-MM-dd HH:mm:ss")}  {ActivityName}.RequestToStart({load})");
             PendingList.Add(load);
-            Schedule(() => AttemptToStart(), TimeSpan); // Caution: New added load and AttemptToStart load may not be the same
+            AttemptToStart(); // Caution: New added load and AttemptToStart load may not be the same
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace O2DESNet.Activity
                 if (_debugMode) Console.WriteLine($"{ClockTime.ToString("yyyy-MM-dd HH:mm:ss")}  {ActivityName}.Depart({load})");
                 HourCounter.ObserveChange(-1);
                 ReadyToDepartList.Remove(load);
-                Schedule(AttemptToStart, TimeSpan);
+                AttemptToStart();
             }
         }
         #endregion
